@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  snapdrop:
+    build: .
+    image: snapdrop
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    container_name: snapdrop
+    ports:
+      - "3000:3000"
